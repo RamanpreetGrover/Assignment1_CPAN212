@@ -1,12 +1,25 @@
 {
-  "name": "assignment1",
+  "name": "student-courses-app",
   "version": "1.0.0",
   "description": "Student and Courses Assignment",
+  "homepage": "https://github.com/RamanpreetGrover/Assignment1_CPAN212#readme",
+  "bugs": {
+    "url": "https://github.com/RamanpreetGrover/Assignment1_CPAN212/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamanpreetGrover/Assignment1_CPAN212.git"
+  },
   "license": "ISC",
-  "author": "",
+  "author": "Raman",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {}
 }
