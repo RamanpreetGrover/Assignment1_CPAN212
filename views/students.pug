@@ -2,7 +2,16 @@ extends layout
 
 block content
   h2 Students
-  ul
-    each student in students
-      li
-        a(href=`/students/${student.id}`)= student.name
+
+  form(action="/students" method="POST" style="margin-bottom: 20px;")
+    label(for="minGrade") Filter by Minimum Average Grade:
+    input(type="number" name="minGrade" min="0" max="100" required)
+    button(type="submit") Apply Filter
+
+  if students.length
+    ul
+      each student in students
+        li
+          a(href=`/students/${student.id}`)= student.name
+  else
+    p No students match the filter criteria.
