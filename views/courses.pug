@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h2 Ongoing Courses Across All Students
+  ul
+    each entry in ongoingCourses
+      li
+        | #{entry.course.name} (#{entry.course.code}) - Taught by #{entry.course.instructor} | Student: #{entry.studentName} | Week #{entry.course.currentWeek}

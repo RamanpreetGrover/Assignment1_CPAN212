@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h2= student.name
+  p Student ID: #{student.id}
+  p Average Grade: #{average}
+
+  h3 Courses:
+  ul
+    each course in student.courses
+      li
+        if course.finalGrade
+          | [Completed] #{course.name} - Final Grade: #{course.finalGrade}
+        else
+          | [Ongoing] #{course.name} - Current Week: #{course.currentWeek}
